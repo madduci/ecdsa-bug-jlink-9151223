@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.github.madduci</groupId>
+  <artifactId>ecdsa-bug-jlink</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>Application demonstrating the ECDSA Bug with JLink</name>
+  <developers>
+    <developer>
+      <id>madduci</id>
+      <name>Michele Adduci</name>
+      <email>adduci@tutanota.com</email>
+      <timezone>Europe/Berlin</timezone>
+      <roles>
+        <role>Software Engineer</role>
+      </roles>
+    </developer>
+  </developers>
+
+
+  <properties>
+    <encoding>UTF-8</encoding>
+    <java.maven.min.version>3.6.0</java.maven.min.version>
+    <java.target.version>11</java.target.version>
+
+    <!-- maven plugins -->
+    <maven.antrun.plugin.version>3.0.0</maven.antrun.plugin.version>
+    <maven.assembly.plugin.version>3.2.0</maven.assembly.plugin.version>
+    <maven.clean.plugin.version>3.1.0</maven.clean.plugin.version>
+    <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+    <maven.compiler.plugin.showWarnings>true</maven.compiler.plugin.showWarnings>
+    <maven.compiler.plugin.showDeprecation>true</maven.compiler.plugin.showDeprecation>
+    <maven.dependency.plugin.version>3.1.2</maven.dependency.plugin.version>
+    <maven.deploy.plugin.version>3.0.0-M1</maven.deploy.plugin.version>
+    <maven.enforcer.plugin.version>3.0.0-M3</maven.enforcer.plugin.version>
+    <maven.install.plugin.version>3.0.0-M1</maven.install.plugin.version>
+    <maven.jar.plugin.version>3.2.0</maven.jar.plugin.version>
+    <maven.javadoc.plugin.version>3.2.0</maven.javadoc.plugin.version>
+    <maven.javadoc.skip>true</maven.javadoc.skip>
+    <maven.release.plugin.version>3.0.0-M1</maven.release.plugin.version>
+    <maven.resources.plugin.version>3.1.0</maven.resources.plugin.version>
+    <maven.site.plugin.version>3.9.0</maven.site.plugin.version>
+
+    <!-- Extra Dependencies Versions -->
+    <asm.version>8.0</asm.version>
+  </properties>
+
+  <!-- Definition of required maven plugins and dependencies with versions -->
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-antrun-plugin</artifactId>
+          <version>${maven.antrun.plugin.version}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <version>${maven.assembly.plugin.version}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>${maven.clean.plugin.version}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${maven.compiler.plugin.version}</version>
+          <executions>
+            <execution>
+              <id>default-compile</id>
+              <configuration>
+                <release>${java.target.version}</release>
+                <source>${java.target.version}</source>
+                <target>${java.target.version}</target>
+                <encoding>${encoding}</encoding>
+                <showDeprecation>${maven.compiler.plugin.showDeprecation}</showDeprecation>
+                <showWarnings>${maven.compiler.plugin.showWarnings}</showWarnings>
+                <fork>true</fork>
+                <meminitial>512</meminitial>
+              </configuration>
+            </execution>
+          </executions>
+          <dependencies>
+            <dependency>
+              <groupId>org.ow2.asm</groupId>
+              <artifactId>asm</artifactId>
+              <version>${asm.version}</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+        <plugin>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>${maven.dependency.plugin.version}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>${maven.deploy.plugin.version}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-enforcer-plugin</artifactId>
+          <version>${maven.enforcer.plugin.version}</version>
+          <executions>
+            <execution>
+              <id>enforce-requirements</id>
+              <goals>
+                <goal>enforce</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <rules>
+              <dependencyConvergence/>
+              <requireMavenVersion>
+                <version>${java.maven.min.version}</version>
+              </requireMavenVersion>
+              <requireJavaVersion>
+                <version>${java.target.version}</version>
+              </requireJavaVersion>
+            </rules>
+          </configuration>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>${maven.install.plugin.version}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>${maven.jar.plugin.version}</version>
+          <configuration>
+            <archive>
+              <manifest>
+                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+              </manifest>
+            </archive>
+          </configuration>
+        </plugin>
+        <plugin>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>${maven.javadoc.plugin.version}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-release-plugin</artifactId>
+          <version>${maven.release.plugin.version}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>${maven.resources.plugin.version}</version>
+          <configuration>
+            <encoding>${encoding}</encoding>
+          </configuration>
+        </plugin>
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>${maven.site.plugin.version}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <!-- Enable Enforcer Plugin to check maven and java version -->
+      <plugin>
+        <artifactId>maven-enforcer-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+  <modules>
+    <module>signature-verifier</module>
+    <module>jlink-builder</module>
+    <module>jpackage-builder</module>
+  </modules>
+
+</project>
