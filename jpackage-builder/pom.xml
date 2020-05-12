@@ -129,8 +129,8 @@
               </target>
             </configuration>
           </execution>
-          <!-- Uncomemnt this section if you want to create your own signed object -->
-          <execution>
+          <!-- Uncomment this section if you want to create your own signed object (requires OpenSSL) -->
+          <!--<execution>
             <id>create-example-signed-object</id>
             <phase>prepare-package</phase>
             <goals>
@@ -154,7 +154,7 @@
                 </exec>
               </target>
             </configuration>
-          </execution>
+          </execution>-->
         </executions>
       </plugin>
     </plugins>
