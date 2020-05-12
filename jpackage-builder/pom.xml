@@ -12,7 +12,12 @@
   <artifactId>jpackage-builder</artifactId>
 
   <properties>
+    <codesign.keystore.alias>m.adduci</codesign.keystore.alias>
+    <codesign.keystore>${project.basedir}/src/main/resources/codesign.p12</codesign.keystore>
+    <codesign.keystore.password>123456</codesign.keystore.password>
+    <hash.algorithm>sha384</hash.algorithm>
     <jarsigner.timestamp.server.url>https://freetsa.org/tsr</jarsigner.timestamp.server.url>
+
     <working.directory>${project.build.directory}/workspace</working.directory>
     <final.application.name>signature-verifier</final.application.name>
     <final.application.version>1.0.0</final.application.version>
@@ -125,7 +130,7 @@
             </configuration>
           </execution>
           <!-- Uncomemnt this section if you want to create your own signed object -->
-          <!--<execution>
+          <execution>
             <id>create-example-signed-object</id>
             <phase>prepare-package</phase>
             <goals>
@@ -134,8 +139,6 @@
             <configuration>
               <target name="sign-file">
                 <echo>########## Signing example file with ${codesign.keystore}</echo>
-                <property name="hash.algorithm.name" value="SHA-384"/>
-                <property name="hash.algorithm" value="sha384"/>
                 <exec dir="${working.directory}" executable="openssl">
                   <arg value="dgst"/>
                   <arg value="-${hash.algorithm}"/>
@@ -151,7 +154,7 @@
                 </exec>
               </target>
             </configuration>
-          </execution>-->
+          </execution>
         </executions>
       </plugin>
     </plugins>

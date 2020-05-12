@@ -21,15 +21,15 @@ Steps to reproduce the issue:
 2. run the following command:
 ```
 ./jpackage-builder/target/workspace/redist/signature-verifier/bin/signature-verifier \
-    -t jpackage-builder/src/main/resources/truststore.jks \
-    -f JKS \
+    -t jpackage-builder/src/main/resources/truststore.p12 \
+    -f PKCS12 \
     -a SHA384withECDSA \
    jpackage-builder/src/main/resources/testfile.txt \
    jpackage-builder/src/main/resources/testfile.txt.sig
 ```
 
 As example, there's a truststore.jks with public certificates to verify the code.
-The signed object is created using openssl like this:
+The signed object is obtained using `openssl` command line tool like this:
 
 ```
 openssl dgst -sha384 -sign "${codesign.keystore} -passin pass:${codesign.keystore.password} \

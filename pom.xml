@@ -26,6 +26,7 @@
     <encoding>UTF-8</encoding>
     <java.maven.min.version>3.6.0</java.maven.min.version>
     <java.target.version>11</java.target.version>
+    <java.jdk.version>14</java.jdk.version>
 
     <!-- maven plugins -->
     <maven.antrun.plugin.version>3.0.0</maven.antrun.plugin.version>
@@ -117,7 +118,7 @@
                 <version>${java.maven.min.version}</version>
               </requireMavenVersion>
               <requireJavaVersion>
-                <version>${java.target.version}</version>
+                <version>${java.jdk.version}</version>
               </requireJavaVersion>
             </rules>
           </configuration>
