@@ -124,6 +124,34 @@
               </target>
             </configuration>
           </execution>
+          <!-- Uncomemnt this section if you want to create your own signed object -->
+          <!--<execution>
+            <id>create-example-signed-object</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <target name="sign-file">
+                <echo>########## Signing example file with ${codesign.keystore}</echo>
+                <property name="hash.algorithm.name" value="SHA-384"/>
+                <property name="hash.algorithm" value="sha384"/>
+                <exec dir="${working.directory}" executable="openssl">
+                  <arg value="dgst"/>
+                  <arg value="-${hash.algorithm}"/>
+                  <arg value="-sign"/>
+                  <arg value="${codesign.keystore}"/>
+                  <arg value="-passin"/>
+                  <arg value="pass:${codesign.keystore.password}"/>
+                  <arg value="-keyform"/>
+                  <arg value="p12"/>
+                  <arg value="-out"/>
+                  <arg value="${project.basedir}/src/main/resources/testfile.txt.sig"/>
+                  <arg value="${project.basedir}/src/main/resources/testfile.txt"/>
+                </exec>
+              </target>
+            </configuration>
+          </execution>-->
         </executions>
       </plugin>
     </plugins>

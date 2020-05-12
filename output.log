@@ -1,0 +1,1033 @@
+jar: beginEntry META-INF/MANIFEST.MF
+jar: beginEntry META-INF/M_ADDUCI.SF
+jar: processEntry: processing block
+jar: beginEntry META-INF/M_ADDUCI.EC
+jar: processEntry: processing block
+properties: reading security properties file: /home/m_adduci/Projects/personal/ecdsa-bug-jlink/jpackage-builder/target/workspace/redist/signature-verifier/lib/runtime/conf/security/java.security
+ProviderList: provider configuration: [SUN, SunRsaSign, SunEC, SunJSSE, SunJCE, SunJGSS, SunSASL, XMLDSig, SunPCSC, JdkLDAP, JdkSASL, SunPKCS11]
+ProviderList: config configuration: null
+provider: NativePRNG egdUrl: file:/dev/random
+provider: NativePRNG.MIXED seedFile: /dev/random nextFile: /dev/urandom
+provider: NativePRNG.BLOCKING seedFile: /dev/random nextFile: /dev/random
+provider: NativePRNG.NONBLOCKING seedFile: /dev/urandom nextFile: /dev/urandom
+Provider: SUN.putService(): SUN: SecureRandom.NativePRNG -> sun.security.provider.NativePRNG
+  attributes: {ThreadSafe=true}
+
+Provider: SUN.putService(): SUN: SecureRandom.NativePRNGBlocking -> sun.security.provider.NativePRNG$Blocking
+  attributes: {ThreadSafe=true}
+
+Provider: SUN.putService(): SUN: SecureRandom.NativePRNGNonBlocking -> sun.security.provider.NativePRNG$NonBlocking
+  attributes: {ThreadSafe=true}
+
+Provider: SUN.putService(): SUN: SecureRandom.DRBG -> sun.security.provider.DRBG
+  attributes: {ImplementedIn=Software, ThreadSafe=true}
+
+Provider: SUN.putService(): SUN: SecureRandom.SHA1PRNG -> sun.security.provider.SecureRandom
+  attributes: {ImplementedIn=Software, ThreadSafe=true}
+
+Provider: SUN.putService(): SUN: Signature.SHA1withDSA -> sun.security.provider.DSA$SHA1withDSA
+  aliases: [1.2.840.10040.4.3, DSA, DSS, SHA/DSA, SHA-1/DSA, SHA1/DSA, SHAwithDSA, DSAWithSHA1, 1.3.14.3.2.13, 1.3.14.3.2.27, OID.1.2.840.10040.4.3]
+  attributes: {ImplementedIn=Software, KeySize=1024, SupportedKeyClasses=java.security.interfaces.DSAPublicKey|java.security.interfaces.DSAPrivateKey}
+
+Provider: SUN.putService(): SUN: Signature.NONEwithDSA -> sun.security.provider.DSA$RawDSA
+  aliases: [RawDSA]
+  attributes: {ImplementedIn=Software, KeySize=1024, SupportedKeyClasses=java.security.interfaces.DSAPublicKey|java.security.interfaces.DSAPrivateKey}
+
+Provider: SUN.putService(): SUN: Signature.SHA224withDSA -> sun.security.provider.DSA$SHA224withDSA
+  aliases: [2.16.840.1.101.3.4.3.1, OID.2.16.840.1.101.3.4.3.1]
+  attributes: {ImplementedIn=Software, KeySize=2048, SupportedKeyClasses=java.security.interfaces.DSAPublicKey|java.security.interfaces.DSAPrivateKey}
+
+Provider: SUN.putService(): SUN: Signature.SHA256withDSA -> sun.security.provider.DSA$SHA256withDSA
+  aliases: [2.16.840.1.101.3.4.3.2, OID.2.16.840.1.101.3.4.3.2]
+  attributes: {ImplementedIn=Software, KeySize=2048, SupportedKeyClasses=java.security.interfaces.DSAPublicKey|java.security.interfaces.DSAPrivateKey}
+
+Provider: SUN.putService(): SUN: Signature.SHA1withDSAinP1363Format -> sun.security.provider.DSA$SHA1withDSAinP1363Format
+
+Provider: SUN.putService(): SUN: Signature.NONEwithDSAinP1363Format -> sun.security.provider.DSA$RawDSAinP1363Format
+
+Provider: SUN.putService(): SUN: Signature.SHA224withDSAinP1363Format -> sun.security.provider.DSA$SHA224withDSAinP1363Format
+
+Provider: SUN.putService(): SUN: Signature.SHA256withDSAinP1363Format -> sun.security.provider.DSA$SHA256withDSAinP1363Format
+
+Provider: SUN.putService(): SUN: KeyPairGenerator.DSA -> sun.security.provider.DSAKeyPairGenerator$Current
+  aliases: [1.2.840.10040.4.1, 1.3.14.3.2.12, OID.1.2.840.10040.4.1]
+  attributes: {ImplementedIn=Software, KeySize=2048}
+
+Provider: SUN.putService(): SUN: AlgorithmParameterGenerator.DSA -> sun.security.provider.DSAParameterGenerator
+  aliases: [1.2.840.10040.4.1, 1.3.14.3.2.12, OID.1.2.840.10040.4.1]
+  attributes: {ImplementedIn=Software, KeySize=2048}
+
+Provider: SUN.putService(): SUN: AlgorithmParameters.DSA -> sun.security.provider.DSAParameters
+  aliases: [1.2.840.10040.4.1, 1.3.14.3.2.12, OID.1.2.840.10040.4.1]
+  attributes: {ImplementedIn=Software}
+
+Provider: SUN.putService(): SUN: KeyFactory.DSA -> sun.security.provider.DSAKeyFactory
+  aliases: [1.2.840.10040.4.1, 1.3.14.3.2.12, OID.1.2.840.10040.4.1]
+  attributes: {ImplementedIn=Software}
+
+Provider: SUN.putService(): SUN: MessageDigest.MD2 -> sun.security.provider.MD2
+  attributes: {ImplementedIn=Software}
+
+Provider: SUN.putService(): SUN: MessageDigest.MD5 -> sun.security.provider.MD5
+  attributes: {ImplementedIn=Software}
+
+Provider: SUN.putService(): SUN: MessageDigest.SHA -> sun.security.provider.SHA
+  aliases: [1.3.14.3.2.26, SHA-1, SHA1, OID.1.3.14.3.2.26]
+  attributes: {ImplementedIn=Software}
+
+Provider: SUN.putService(): SUN: MessageDigest.SHA-224 -> sun.security.provider.SHA2$SHA224
+  aliases: [2.16.840.1.101.3.4.2.4, OID.2.16.840.1.101.3.4.2.4]
+  attributes: {ImplementedIn=Software}
+
+Provider: SUN.putService(): SUN: MessageDigest.SHA-256 -> sun.security.provider.SHA2$SHA256
+  aliases: [2.16.840.1.101.3.4.2.1, OID.2.16.840.1.101.3.4.2.1]
+  attributes: {ImplementedIn=Software}
+
+Provider: SUN.putService(): SUN: MessageDigest.SHA-384 -> sun.security.provider.SHA5$SHA384
+  aliases: [2.16.840.1.101.3.4.2.2, OID.2.16.840.1.101.3.4.2.2]
+  attributes: {ImplementedIn=Software}
+
+Provider: SUN.putService(): SUN: MessageDigest.SHA-512 -> sun.security.provider.SHA5$SHA512
+  aliases: [2.16.840.1.101.3.4.2.3, OID.2.16.840.1.101.3.4.2.3]
+  attributes: {ImplementedIn=Software}
+
+Provider: SUN.putService(): SUN: MessageDigest.SHA-512/224 -> sun.security.provider.SHA5$SHA512_224
+  aliases: [2.16.840.1.101.3.4.2.5, OID.2.16.840.1.101.3.4.2.5]
+  attributes: {ImplementedIn=Software}
+
+Provider: SUN.putService(): SUN: MessageDigest.SHA-512/256 -> sun.security.provider.SHA5$SHA512_256
+  aliases: [2.16.840.1.101.3.4.2.6, OID.2.16.840.1.101.3.4.2.6]
+  attributes: {ImplementedIn=Software}
+
+Provider: SUN.putService(): SUN: MessageDigest.SHA3-224 -> sun.security.provider.SHA3$SHA224
+  aliases: [2.16.840.1.101.3.4.2.7, OID.2.16.840.1.101.3.4.2.7]
+  attributes: {ImplementedIn=Software}
+
+Provider: SUN.putService(): SUN: MessageDigest.SHA3-256 -> sun.security.provider.SHA3$SHA256
+  aliases: [2.16.840.1.101.3.4.2.8, OID.2.16.840.1.101.3.4.2.8]
+  attributes: {ImplementedIn=Software}
+
+Provider: SUN.putService(): SUN: MessageDigest.SHA3-384 -> sun.security.provider.SHA3$SHA384
+  aliases: [2.16.840.1.101.3.4.2.9, OID.2.16.840.1.101.3.4.2.9]
+  attributes: {ImplementedIn=Software}
+
+Provider: SUN.putService(): SUN: MessageDigest.SHA3-512 -> sun.security.provider.SHA3$SHA512
+  aliases: [2.16.840.1.101.3.4.2.10, OID.2.16.840.1.101.3.4.2.10]
+  attributes: {ImplementedIn=Software}
+
+Provider: SUN.putService(): SUN: CertificateFactory.X.509 -> sun.security.provider.X509Factory
+  aliases: [X509]
+  attributes: {ImplementedIn=Software}
+
+Provider: SUN.putService(): SUN: KeyStore.PKCS12 -> sun.security.pkcs12.PKCS12KeyStore$DualFormatPKCS12
+
+Provider: SUN.putService(): SUN: KeyStore.JKS -> sun.security.provider.JavaKeyStore$DualFormatJKS
+  attributes: {ImplementedIn=Software}
+
+Provider: SUN.putService(): SUN: KeyStore.CaseExactJKS -> sun.security.provider.JavaKeyStore$CaseExactJKS
+  attributes: {ImplementedIn=Software}
+
+Provider: SUN.putService(): SUN: KeyStore.DKS -> sun.security.provider.DomainKeyStore$DKS
+  attributes: {ImplementedIn=Software}
+
+Provider: SUN.putService(): SUN: CertStore.Collection -> sun.security.provider.certpath.CollectionCertStore
+  attributes: {ImplementedIn=Software}
+
+Provider: SUN.putService(): SUN: CertStore.com.sun.security.IndexedCollection -> sun.security.provider.certpath.IndexedCollectionCertStore
+  attributes: {ImplementedIn=Software}
+
+Provider: SUN.putService(): SUN: Policy.JavaPolicy -> sun.security.provider.PolicySpiFile
+
+Provider: SUN.putService(): SUN: Configuration.JavaLoginConfig -> sun.security.provider.ConfigFile$Spi
+
+Provider: SUN.putService(): SUN: CertPathBuilder.PKIX -> sun.security.provider.certpath.SunCertPathBuilder
+  attributes: {ImplementedIn=Software, ValidationAlgorithm=RFC5280}
+
+Provider: SUN.putService(): SUN: CertPathValidator.PKIX -> sun.security.provider.certpath.PKIXCertPathValidator
+  attributes: {ImplementedIn=Software, ValidationAlgorithm=RFC5280}
+
+ProviderList: ThreadLocal providers: [SUN, SunRsaSign, SunEC]
+Provider: SunRsaSign.putService(): SunRsaSign: KeyFactory.RSA -> sun.security.rsa.RSAKeyFactory$Legacy
+  aliases: [1.2.840.113549.1.1, OID.1.2.840.113549.1.1]
+
+Provider: SunRsaSign.putService(): SunRsaSign: KeyPairGenerator.RSA -> sun.security.rsa.RSAKeyPairGenerator$Legacy
+  aliases: [1.2.840.113549.1.1, OID.1.2.840.113549.1.1]
+
+Provider: SunRsaSign.putService(): SunRsaSign: Signature.MD2withRSA -> sun.security.rsa.RSASignature$MD2withRSA
+  aliases: [1.2.840.113549.1.1.2, OID.1.2.840.113549.1.1.2]
+  attributes: {SupportedKeyClasses=java.security.interfaces.RSAPublicKey|java.security.interfaces.RSAPrivateKey}
+
+Provider: SunRsaSign.putService(): SunRsaSign: Signature.MD5withRSA -> sun.security.rsa.RSASignature$MD5withRSA
+  aliases: [1.2.840.113549.1.1.4, OID.1.2.840.113549.1.1.4]
+  attributes: {SupportedKeyClasses=java.security.interfaces.RSAPublicKey|java.security.interfaces.RSAPrivateKey}
+
+Provider: SunRsaSign.putService(): SunRsaSign: Signature.SHA1withRSA -> sun.security.rsa.RSASignature$SHA1withRSA
+  aliases: [1.2.840.113549.1.1.5, 1.3.14.3.2.29, OID.1.2.840.113549.1.1.5]
+  attributes: {SupportedKeyClasses=java.security.interfaces.RSAPublicKey|java.security.interfaces.RSAPrivateKey}
+
+Provider: SunRsaSign.putService(): SunRsaSign: Signature.SHA224withRSA -> sun.security.rsa.RSASignature$SHA224withRSA
+  aliases: [1.2.840.113549.1.1.14, OID.1.2.840.113549.1.1.14]
+  attributes: {SupportedKeyClasses=java.security.interfaces.RSAPublicKey|java.security.interfaces.RSAPrivateKey}
+
+Provider: SunRsaSign.putService(): SunRsaSign: Signature.SHA256withRSA -> sun.security.rsa.RSASignature$SHA256withRSA
+  aliases: [1.2.840.113549.1.1.11, OID.1.2.840.113549.1.1.11]
+  attributes: {SupportedKeyClasses=java.security.interfaces.RSAPublicKey|java.security.interfaces.RSAPrivateKey}
+
+Provider: SunRsaSign.putService(): SunRsaSign: Signature.SHA384withRSA -> sun.security.rsa.RSASignature$SHA384withRSA
+  aliases: [1.2.840.113549.1.1.12, OID.1.2.840.113549.1.1.12]
+  attributes: {SupportedKeyClasses=java.security.interfaces.RSAPublicKey|java.security.interfaces.RSAPrivateKey}
+
+Provider: SunRsaSign.putService(): SunRsaSign: Signature.SHA512withRSA -> sun.security.rsa.RSASignature$SHA512withRSA
+  aliases: [1.2.840.113549.1.1.13, OID.1.2.840.113549.1.1.13]
+  attributes: {SupportedKeyClasses=java.security.interfaces.RSAPublicKey|java.security.interfaces.RSAPrivateKey}
+
+Provider: SunRsaSign.putService(): SunRsaSign: Signature.SHA512/224withRSA -> sun.security.rsa.RSASignature$SHA512_224withRSA
+  aliases: [1.2.840.113549.1.1.15, OID.1.2.840.113549.1.1.15]
+  attributes: {SupportedKeyClasses=java.security.interfaces.RSAPublicKey|java.security.interfaces.RSAPrivateKey}
+
+Provider: SunRsaSign.putService(): SunRsaSign: Signature.SHA512/256withRSA -> sun.security.rsa.RSASignature$SHA512_256withRSA
+  aliases: [1.2.840.113549.1.1.16, OID.1.2.840.113549.1.1.16]
+  attributes: {SupportedKeyClasses=java.security.interfaces.RSAPublicKey|java.security.interfaces.RSAPrivateKey}
+
+Provider: SunRsaSign.putService(): SunRsaSign: KeyFactory.RSASSA-PSS -> sun.security.rsa.RSAKeyFactory$PSS
+  aliases: [1.2.840.113549.1.1.10, OID.1.2.840.113549.1.1.10]
+
+Provider: SunRsaSign.putService(): SunRsaSign: KeyPairGenerator.RSASSA-PSS -> sun.security.rsa.RSAKeyPairGenerator$PSS
+  aliases: [1.2.840.113549.1.1.10, OID.1.2.840.113549.1.1.10]
+
+Provider: SunRsaSign.putService(): SunRsaSign: Signature.RSASSA-PSS -> sun.security.rsa.RSAPSSSignature
+  aliases: [1.2.840.113549.1.1.10, OID.1.2.840.113549.1.1.10]
+  attributes: {SupportedKeyClasses=java.security.interfaces.RSAPublicKey|java.security.interfaces.RSAPrivateKey}
+
+Provider: SunRsaSign.putService(): SunRsaSign: AlgorithmParameters.RSASSA-PSS -> sun.security.rsa.PSSParameters
+  aliases: [1.2.840.113549.1.1.10, OID.1.2.840.113549.1.1.10]
+
+ProviderConfig: Loading provider SunEC
+ProviderConfig: Attempt to load SunEC using SL
+ProviderConfig: Loading legacy provider: SunEC
+ProviderConfig: Error loading legacy provider SunEC
+java.lang.ClassNotFoundException: SunEC
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$ProviderLoader.legacyLoad(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$ProviderLoader.load(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$3.run(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$3.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig.doLoadProvider(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig.getProvider(Unknown Source)
+	at java.base/sun.security.jca.ProviderList.getProvider(Unknown Source)
+	at java.base/sun.security.jca.ProviderList.getService(Unknown Source)
+	at java.base/sun.security.jca.GetInstance.getInstance(Unknown Source)
+	at java.base/java.security.Security.getImpl(Unknown Source)
+	at java.base/java.security.AlgorithmParameters.getInstance(Unknown Source)
+	at java.base/sun.security.x509.AlgorithmId.decodeParams(Unknown Source)
+	at java.base/sun.security.x509.AlgorithmId.<init>(Unknown Source)
+	at java.base/sun.security.x509.AlgorithmId.parse(Unknown Source)
+	at java.base/sun.security.x509.X509Key.parse(Unknown Source)
+	at java.base/sun.security.x509.CertificateX509Key.<init>(Unknown Source)
+	at java.base/sun.security.x509.X509CertInfo.parse(Unknown Source)
+	at java.base/sun.security.x509.X509CertInfo.<init>(Unknown Source)
+	at java.base/sun.security.x509.X509CertImpl.parse(Unknown Source)
+	at java.base/sun.security.x509.X509CertImpl.<init>(Unknown Source)
+	at java.base/sun.security.provider.X509Factory.engineGenerateCertificate(Unknown Source)
+	at java.base/java.security.cert.CertificateFactory.generateCertificate(Unknown Source)
+	at java.base/sun.security.pkcs.PKCS7.parseSignedData(Unknown Source)
+	at java.base/sun.security.pkcs.PKCS7.parse(Unknown Source)
+	at java.base/sun.security.pkcs.PKCS7.parse(Unknown Source)
+	at java.base/sun.security.pkcs.PKCS7.<init>(Unknown Source)
+	at java.base/sun.security.util.SignatureFileVerifier.<init>(Unknown Source)
+	at java.base/java.util.jar.JarVerifier.processEntry(Unknown Source)
+	at java.base/java.util.jar.JarVerifier.update(Unknown Source)
+	at java.base/java.util.jar.JarFile.initializeVerifier(Unknown Source)
+	at java.base/java.util.jar.JarFile.getInputStream(Unknown Source)
+	at java.base/jdk.internal.module.ModulePath.readJar(Unknown Source)
+	at java.base/jdk.internal.module.ModulePath.readModule(Unknown Source)
+	at java.base/jdk.internal.module.ModulePath.scanDirectory(Unknown Source)
+	at java.base/jdk.internal.module.ModulePath.scan(Unknown Source)
+	at java.base/jdk.internal.module.ModulePath.scanNextEntry(Unknown Source)
+	at java.base/jdk.internal.module.ModulePath.find(Unknown Source)
+	at java.base/java.lang.module.ModuleFinder$2.lambda$find$0(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.base/java.util.AbstractList$RandomAccessSpliterator.tryAdvance(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at java.base/java.lang.module.ModuleFinder$2.find(Unknown Source)
+	at java.base/java.lang.module.Resolver.findWithBeforeFinder(Unknown Source)
+	at java.base/java.lang.module.Resolver.resolve(Unknown Source)
+	at java.base/java.lang.module.Configuration.resolveAndBind(Unknown Source)
+	at java.base/java.lang.module.ModuleDescriptor$1.resolveAndBind(Unknown Source)
+	at java.base/jdk.internal.module.Modules.newBootLayerConfiguration(Unknown Source)
+	at java.base/jdk.internal.module.ModuleBootstrap.boot(Unknown Source)
+	at java.base/java.lang.System.initPhase2(Unknown Source)
+ProviderConfig: Error loading provider SunEC
+certpath: Constraints: MD2
+certpath: Constraints: MD5
+certpath: Constraints: RSA keySize < 1024
+certpath: Constraints set to keySize: keySize < 1024
+certpath: Constraints: DSA keySize < 1024
+certpath: Constraints set to keySize: keySize < 1024
+certpath: Constraints: secp112r1
+certpath: Constraints: secp112r2
+certpath: Constraints: secp128r1
+certpath: Constraints: secp128r2
+certpath: Constraints: secp160k1
+certpath: Constraints: secp160r1
+certpath: Constraints: secp160r2
+certpath: Constraints: secp192k1
+certpath: Constraints: secp192r1
+certpath: Constraints: secp224k1
+certpath: Constraints: secp224r1
+certpath: Constraints: secp256k1
+certpath: Constraints: sect113r1
+certpath: Constraints: sect113r2
+certpath: Constraints: sect131r1
+certpath: Constraints: sect131r2
+certpath: Constraints: sect163k1
+certpath: Constraints: sect163r1
+certpath: Constraints: sect163r2
+certpath: Constraints: sect193r1
+certpath: Constraints: sect193r2
+certpath: Constraints: sect233k1
+certpath: Constraints: sect233r1
+certpath: Constraints: sect239k1
+certpath: Constraints: sect283k1
+certpath: Constraints: sect283r1
+certpath: Constraints: sect409k1
+certpath: Constraints: sect409r1
+certpath: Constraints: sect571k1
+certpath: Constraints: sect571r1
+certpath: Constraints: X9.62 c2tnb191v1
+certpath: Constraints: X9.62 c2tnb191v2
+certpath: Constraints: X9.62 c2tnb191v3
+certpath: Constraints: X9.62 c2tnb239v1
+certpath: Constraints: X9.62 c2tnb239v2
+certpath: Constraints: X9.62 c2tnb239v3
+certpath: Constraints: X9.62 c2tnb359v1
+certpath: Constraints: X9.62 c2tnb431r1
+certpath: Constraints: X9.62 prime192v2
+certpath: Constraints: X9.62 prime192v3
+certpath: Constraints: X9.62 prime239v1
+certpath: Constraints: X9.62 prime239v2
+certpath: Constraints: X9.62 prime239v3
+certpath: Constraints: brainpoolP256r1
+certpath: Constraints: brainpoolP320r1
+certpath: Constraints: brainpoolP384r1
+certpath: Constraints: brainpoolP512r1
+ProviderList: Disabling ThreadLocal providers
+ProviderList: ThreadLocal providers: [SUN, SunRsaSign, SunEC]
+certpath: Constraints.permits(): Cert:       None
+AlgParams:  None
+NamedCurves:
+Variant:    generic
+Provider: MessageDigest.SHA-512 algorithm from: SUN
+certpath: Constraints.permits(): Cert:       None
+AlgParams:  None
+NamedCurves:
+Variant:    generic
+certpath: KeySizeConstraints.permits(): RSA
+Provider: MessageDigest.SHA-512 algorithm from: SUN
+Provider: Signature.SHA512withRSA verification algorithm from: SunRsaSign
+Provider: MessageDigest.SHA-256 algorithm from: SUN
+jar:
+jar: Detected signature timestamp (#1630647) generated on Tue May 12 09:23:24 CEST 2020
+jar:
+certpath: Constraints.permits(): Cert:       None
+AlgParams:  None
+NamedCurves:
+Variant:    generic
+ProviderList: Disabling ThreadLocal providers
+jar: processEntry caught: java.security.NoSuchAlgorithmException: SHA256withECDSA Signature not available
+jar: done with meta!
+jar: nothing to verify!
+jar: beginEntry META-INF/MANIFEST.MF
+jar: beginEntry META-INF/M_ADDUCI.SF
+jar: processEntry: processing block
+jar: beginEntry META-INF/M_ADDUCI.EC
+jar: processEntry: processing block
+ProviderList: ThreadLocal providers: [SUN, SunRsaSign, SunEC]
+ProviderList: Disabling ThreadLocal providers
+ProviderList: ThreadLocal providers: [SUN, SunRsaSign, SunEC]
+certpath: Constraints.permits(): Cert:       None
+AlgParams:  None
+NamedCurves:
+Variant:    generic
+Provider: MessageDigest.SHA-512 algorithm from: SUN
+certpath: Constraints.permits(): Cert:       None
+AlgParams:  None
+NamedCurves:
+Variant:    generic
+certpath: KeySizeConstraints.permits(): RSA
+Provider: MessageDigest.SHA-512 algorithm from: SUN
+Provider: Signature.SHA512withRSA verification algorithm from: SunRsaSign
+Provider: MessageDigest.SHA-256 algorithm from: SUN
+jar:
+jar: Detected signature timestamp (#1630647) generated on Tue May 12 09:23:24 CEST 2020
+jar:
+certpath: Constraints.permits(): Cert:       None
+AlgParams:  None
+NamedCurves:
+Variant:    generic
+ProviderList: Disabling ThreadLocal providers
+jar: processEntry caught: java.security.NoSuchAlgorithmException: SHA256withECDSA Signature not available
+jar: done with meta!
+jar: nothing to verify!
+scl:  getPermissions ProtectionDomain  (file:/home/m_adduci/Projects/personal/ecdsa-bug-jlink/jpackage-builder/target/workspace/redist/signature-verifier/lib/app/mods/signature-verifier-1.0.0-SNAPSHOT.jar <no signer certificates>)
+ jdk.internal.loader.ClassLoaders$AppClassLoader@6c49835d
+ <no principals>
+ java.security.Permissions@480bdb19 (
+ ("java.lang.RuntimePermission" "exitVM")
+ ("java.io.FilePermission" "/home/m_adduci/Projects/personal/ecdsa-bug-jlink/jpackage-builder/target/workspace/redist/signature-verifier/lib/app/mods/signature-verifier-1.0.0-SNAPSHOT.jar" "read")
+)
+
+
+scl:
+jar: beginEntry META-INF/MANIFEST.MF
+jar: beginEntry META-INF/M_ADDUCI.SF
+jar: processEntry: processing block
+jar: beginEntry META-INF/M_ADDUCI.EC
+jar: processEntry: processing block
+ProviderList: ThreadLocal providers: [SUN, SunRsaSign, SunEC]
+ProviderList: Disabling ThreadLocal providers
+ProviderList: ThreadLocal providers: [SUN, SunRsaSign, SunEC]
+certpath: Constraints.permits(): Cert:       None
+AlgParams:  None
+NamedCurves:
+Variant:    generic
+Provider: MessageDigest.SHA-512 algorithm from: SUN
+certpath: Constraints.permits(): Cert:       None
+AlgParams:  None
+NamedCurves:
+Variant:    generic
+certpath: KeySizeConstraints.permits(): RSA
+Provider: MessageDigest.SHA-512 algorithm from: SUN
+Provider: Signature.SHA512withRSA verification algorithm from: SunRsaSign
+Provider: MessageDigest.SHA-256 algorithm from: SUN
+jar:
+jar: Detected signature timestamp (#1630646) generated on Tue May 12 09:23:20 CEST 2020
+jar:
+certpath: Constraints.permits(): Cert:       None
+AlgParams:  None
+NamedCurves:
+Variant:    generic
+ProviderList: Disabling ThreadLocal providers
+jar: processEntry caught: java.security.NoSuchAlgorithmException: SHA256withECDSA Signature not available
+jar: done with meta!
+jar: nothing to verify!
+scl:  getPermissions ProtectionDomain  (file:/home/m_adduci/Projects/personal/ecdsa-bug-jlink/jpackage-builder/target/workspace/redist/signature-verifier/lib/app/mods/argparse4j-0.8.1.jar <no signer certificates>)
+ jdk.internal.loader.ClassLoaders$AppClassLoader@6c49835d
+ <no principals>
+ java.security.Permissions@631330c (
+ ("java.lang.RuntimePermission" "exitVM")
+ ("java.io.FilePermission" "/home/m_adduci/Projects/personal/ecdsa-bug-jlink/jpackage-builder/target/workspace/redist/signature-verifier/lib/app/mods/argparse4j-0.8.1.jar" "read")
+)
+
+
+scl:
+Provider: KeyStore.JKS type from: SUN
+Provider: MessageDigest.SHA algorithm from: SUN
+keystore: JavaKeyStore load: private key count: 0. trusted key count: 4
+keystore: Loaded a keystore in JKS format
+Using CN=Team eID Root CA
+Provider: SunJSSE.putService(): SunJSSE: Signature.MD5andSHA1withRSA -> sun.security.ssl.RSASignature
+
+Provider: SunJSSE.putService(): SunJSSE: KeyManagerFactory.SunX509 -> sun.security.ssl.KeyManagerFactoryImpl$SunX509
+
+Provider: SunJSSE.putService(): SunJSSE: KeyManagerFactory.NewSunX509 -> sun.security.ssl.KeyManagerFactoryImpl$X509
+  aliases: [PKIX]
+
+Provider: SunJSSE.putService(): SunJSSE: TrustManagerFactory.SunX509 -> sun.security.ssl.TrustManagerFactoryImpl$SimpleFactory
+
+Provider: SunJSSE.putService(): SunJSSE: TrustManagerFactory.PKIX -> sun.security.ssl.TrustManagerFactoryImpl$PKIXFactory
+  aliases: [SunPKIX, X509, X.509]
+
+Provider: SunJSSE.putService(): SunJSSE: SSLContext.TLSv1 -> sun.security.ssl.SSLContextImpl$TLS10Context
+  aliases: [SSLv3]
+
+Provider: SunJSSE.putService(): SunJSSE: SSLContext.TLSv1.1 -> sun.security.ssl.SSLContextImpl$TLS11Context
+
+Provider: SunJSSE.putService(): SunJSSE: SSLContext.TLSv1.2 -> sun.security.ssl.SSLContextImpl$TLS12Context
+
+Provider: SunJSSE.putService(): SunJSSE: SSLContext.TLSv1.3 -> sun.security.ssl.SSLContextImpl$TLS13Context
+
+Provider: SunJSSE.putService(): SunJSSE: SSLContext.TLS -> sun.security.ssl.SSLContextImpl$TLSContext
+  aliases: [SSL]
+
+Provider: SunJSSE.putService(): SunJSSE: SSLContext.DTLSv1.0 -> sun.security.ssl.SSLContextImpl$DTLS10Context
+
+Provider: SunJSSE.putService(): SunJSSE: SSLContext.DTLSv1.2 -> sun.security.ssl.SSLContextImpl$DTLS12Context
+
+Provider: SunJSSE.putService(): SunJSSE: SSLContext.DTLS -> sun.security.ssl.SSLContextImpl$DTLSContext
+
+Provider: SunJSSE.putService(): SunJSSE: SSLContext.Default -> sun.security.ssl.SSLContextImpl$DefaultSSLContext
+
+Provider: SunJSSE.putService(): SunJSSE: KeyStore.PKCS12 -> sun.security.pkcs12.PKCS12KeyStore
+
+Provider: SunJCE.putService(): SunJCE: Cipher.RSA -> com.sun.crypto.provider.RSACipher
+  attributes: {SupportedModes=ECB, SupportedPaddings=NOPADDING|PKCS1PADDING|OAEPPADDING|OAEPWITHMD5ANDMGF1PADDING|OAEPWITHSHA1ANDMGF1PADDING|OAEPWITHSHA-1ANDMGF1PADDING|OAEPWITHSHA-224ANDMGF1PADDING|OAEPWITHSHA-256ANDMGF1PADDING|OAEPWITHSHA-384ANDMGF1PADDING|OAEPWITHSHA-512ANDMGF1PADDING|OAEPWITHSHA-512/224ANDMGF1PADDING|OAEPWITHSHA-512/256ANDMGF1PADDING, SupportedKeyClasses=java.security.interfaces.RSAPublicKey|java.security.interfaces.RSAPrivateKey}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.DES -> com.sun.crypto.provider.DESCipher
+  attributes: {SupportedKeyFormats=RAW, SupportedModes=ECB|CBC|PCBC|CTR|CTS|CFB|OFB|CFB8|CFB16|CFB24|CFB32|CFB40|CFB48|CFB56|CFB64|OFB8|OFB16|OFB24|OFB32|OFB40|OFB48|OFB56|OFB64, SupportedPaddings=NOPADDING|PKCS5PADDING|ISO10126PADDING}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.DESede -> com.sun.crypto.provider.DESedeCipher
+  aliases: [TripleDES]
+  attributes: {SupportedKeyFormats=RAW, SupportedModes=ECB|CBC|PCBC|CTR|CTS|CFB|OFB|CFB8|CFB16|CFB24|CFB32|CFB40|CFB48|CFB56|CFB64|OFB8|OFB16|OFB24|OFB32|OFB40|OFB48|OFB56|OFB64, SupportedPaddings=NOPADDING|PKCS5PADDING|ISO10126PADDING}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.Blowfish -> com.sun.crypto.provider.BlowfishCipher
+  attributes: {SupportedKeyFormats=RAW, SupportedModes=ECB|CBC|PCBC|CTR|CTS|CFB|OFB|CFB8|CFB16|CFB24|CFB32|CFB40|CFB48|CFB56|CFB64|OFB8|OFB16|OFB24|OFB32|OFB40|OFB48|OFB56|OFB64, SupportedPaddings=NOPADDING|PKCS5PADDING|ISO10126PADDING}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.RC2 -> com.sun.crypto.provider.RC2Cipher
+  attributes: {SupportedKeyFormats=RAW, SupportedModes=ECB|CBC|PCBC|CTR|CTS|CFB|OFB|CFB8|CFB16|CFB24|CFB32|CFB40|CFB48|CFB56|CFB64|OFB8|OFB16|OFB24|OFB32|OFB40|OFB48|OFB56|OFB64, SupportedPaddings=NOPADDING|PKCS5PADDING|ISO10126PADDING}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.AES -> com.sun.crypto.provider.AESCipher$General
+  aliases: [Rijndael]
+  attributes: {SupportedKeyFormats=RAW, SupportedModes=ECB|CBC|PCBC|CTR|CTS|CFB|OFB|CFB8|CFB16|CFB24|CFB32|CFB40|CFB48|CFB56|CFB64|OFB8|OFB16|OFB24|OFB32|OFB40|OFB48|OFB56|OFB64|GCM|CFB72|CFB80|CFB88|CFB96|CFB104|CFB112|CFB120|CFB128|OFB72|OFB80|OFB88|OFB96|OFB104|OFB112|OFB120|OFB128, SupportedPaddings=NOPADDING|PKCS5PADDING|ISO10126PADDING}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.AES_128/ECB/NoPadding -> com.sun.crypto.provider.AESCipher$AES128_ECB_NoPadding
+  aliases: [2.16.840.1.101.3.4.1.1, OID.2.16.840.1.101.3.4.1.1]
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.AES_128/CBC/NoPadding -> com.sun.crypto.provider.AESCipher$AES128_CBC_NoPadding
+  aliases: [2.16.840.1.101.3.4.1.2, OID.2.16.840.1.101.3.4.1.2]
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.AES_128/OFB/NoPadding -> com.sun.crypto.provider.AESCipher$AES128_OFB_NoPadding
+  aliases: [2.16.840.1.101.3.4.1.3, OID.2.16.840.1.101.3.4.1.3]
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.AES_128/CFB/NoPadding -> com.sun.crypto.provider.AESCipher$AES128_CFB_NoPadding
+  aliases: [2.16.840.1.101.3.4.1.4, OID.2.16.840.1.101.3.4.1.4]
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.AES_128/GCM/NoPadding -> com.sun.crypto.provider.AESCipher$AES128_GCM_NoPadding
+  aliases: [2.16.840.1.101.3.4.1.6, OID.2.16.840.1.101.3.4.1.6]
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.AES_192/ECB/NoPadding -> com.sun.crypto.provider.AESCipher$AES192_ECB_NoPadding
+  aliases: [2.16.840.1.101.3.4.1.21, OID.2.16.840.1.101.3.4.1.21]
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.AES_192/CBC/NoPadding -> com.sun.crypto.provider.AESCipher$AES192_CBC_NoPadding
+  aliases: [2.16.840.1.101.3.4.1.22, OID.2.16.840.1.101.3.4.1.22]
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.AES_192/OFB/NoPadding -> com.sun.crypto.provider.AESCipher$AES192_OFB_NoPadding
+  aliases: [2.16.840.1.101.3.4.1.23, OID.2.16.840.1.101.3.4.1.23]
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.AES_192/CFB/NoPadding -> com.sun.crypto.provider.AESCipher$AES192_CFB_NoPadding
+  aliases: [2.16.840.1.101.3.4.1.24, OID.2.16.840.1.101.3.4.1.24]
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.AES_192/GCM/NoPadding -> com.sun.crypto.provider.AESCipher$AES192_GCM_NoPadding
+  aliases: [2.16.840.1.101.3.4.1.26, OID.2.16.840.1.101.3.4.1.26]
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.AES_256/ECB/NoPadding -> com.sun.crypto.provider.AESCipher$AES256_ECB_NoPadding
+  aliases: [2.16.840.1.101.3.4.1.41, OID.2.16.840.1.101.3.4.1.41]
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.AES_256/CBC/NoPadding -> com.sun.crypto.provider.AESCipher$AES256_CBC_NoPadding
+  aliases: [2.16.840.1.101.3.4.1.42, OID.2.16.840.1.101.3.4.1.42]
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.AES_256/OFB/NoPadding -> com.sun.crypto.provider.AESCipher$AES256_OFB_NoPadding
+  aliases: [2.16.840.1.101.3.4.1.43, OID.2.16.840.1.101.3.4.1.43]
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.AES_256/CFB/NoPadding -> com.sun.crypto.provider.AESCipher$AES256_CFB_NoPadding
+  aliases: [2.16.840.1.101.3.4.1.44, OID.2.16.840.1.101.3.4.1.44]
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.AES_256/GCM/NoPadding -> com.sun.crypto.provider.AESCipher$AES256_GCM_NoPadding
+  aliases: [2.16.840.1.101.3.4.1.46, OID.2.16.840.1.101.3.4.1.46]
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.DESedeWrap -> com.sun.crypto.provider.DESedeWrapCipher
+  attributes: {SupportedKeyFormats=RAW, SupportedModes=CBC, SupportedPaddings=NOPADDING}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.ARCFOUR -> com.sun.crypto.provider.ARCFOURCipher
+  aliases: [RC4]
+  attributes: {SupportedKeyFormats=RAW, SupportedModes=ECB, SupportedPaddings=NOPADDING}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.AESWrap -> com.sun.crypto.provider.AESWrapCipher$General
+  attributes: {SupportedKeyFormats=RAW, SupportedModes=ECB, SupportedPaddings=NOPADDING}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.AESWrap_128 -> com.sun.crypto.provider.AESWrapCipher$AES128
+  aliases: [2.16.840.1.101.3.4.1.5, OID.2.16.840.1.101.3.4.1.5]
+  attributes: {SupportedKeyFormats=RAW, SupportedModes=ECB, SupportedPaddings=NOPADDING}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.AESWrap_192 -> com.sun.crypto.provider.AESWrapCipher$AES192
+  aliases: [2.16.840.1.101.3.4.1.25, OID.2.16.840.1.101.3.4.1.25]
+  attributes: {SupportedKeyFormats=RAW, SupportedModes=ECB, SupportedPaddings=NOPADDING}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.AESWrap_256 -> com.sun.crypto.provider.AESWrapCipher$AES256
+  aliases: [2.16.840.1.101.3.4.1.45, OID.2.16.840.1.101.3.4.1.45]
+  attributes: {SupportedKeyFormats=RAW, SupportedModes=ECB, SupportedPaddings=NOPADDING}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.ChaCha20 -> com.sun.crypto.provider.ChaCha20Cipher$ChaCha20Only
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.ChaCha20-Poly1305 -> com.sun.crypto.provider.ChaCha20Cipher$ChaCha20Poly1305
+  aliases: [1.2.840.113549.1.9.16.3.18, OID.1.2.840.113549.1.9.16.3.18]
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Cipher.PBEWithMD5AndDES -> com.sun.crypto.provider.PBEWithMD5AndDESCipher
+  aliases: [1.2.840.113549.1.5.3, PBE, OID.1.2.840.113549.1.5.3]
+
+Provider: SunJCE.putService(): SunJCE: Cipher.PBEWithMD5AndTripleDES -> com.sun.crypto.provider.PBEWithMD5AndTripleDESCipher
+
+Provider: SunJCE.putService(): SunJCE: Cipher.PBEWithSHA1AndDESede -> com.sun.crypto.provider.PKCS12PBECipherCore$PBEWithSHA1AndDESede
+  aliases: [1.2.840.113549.1.12.1.3, OID.1.2.840.113549.1.12.1.3]
+
+Provider: SunJCE.putService(): SunJCE: Cipher.PBEWithSHA1AndRC2_40 -> com.sun.crypto.provider.PKCS12PBECipherCore$PBEWithSHA1AndRC2_40
+  aliases: [1.2.840.113549.1.12.1.6, OID.1.2.840.113549.1.12.1.6]
+
+Provider: SunJCE.putService(): SunJCE: Cipher.PBEWithSHA1AndRC2_128 -> com.sun.crypto.provider.PKCS12PBECipherCore$PBEWithSHA1AndRC2_128
+  aliases: [1.2.840.113549.1.12.1.5, OID.1.2.840.113549.1.12.1.5]
+
+Provider: SunJCE.putService(): SunJCE: Cipher.PBEWithSHA1AndRC4_40 -> com.sun.crypto.provider.PKCS12PBECipherCore$PBEWithSHA1AndRC4_40
+  aliases: [1.2.840.113549.1.12.1.2, OID.1.2.840.113549.1.12.1.2]
+
+Provider: SunJCE.putService(): SunJCE: Cipher.PBEWithSHA1AndRC4_128 -> com.sun.crypto.provider.PKCS12PBECipherCore$PBEWithSHA1AndRC4_128
+  aliases: [1.2.840.113549.1.12.1.1, OID.1.2.840.113549.1.12.1.1]
+
+Provider: SunJCE.putService(): SunJCE: Cipher.PBEWithHmacSHA1AndAES_128 -> com.sun.crypto.provider.PBES2Core$HmacSHA1AndAES_128
+
+Provider: SunJCE.putService(): SunJCE: Cipher.PBEWithHmacSHA224AndAES_128 -> com.sun.crypto.provider.PBES2Core$HmacSHA224AndAES_128
+
+Provider: SunJCE.putService(): SunJCE: Cipher.PBEWithHmacSHA256AndAES_128 -> com.sun.crypto.provider.PBES2Core$HmacSHA256AndAES_128
+
+Provider: SunJCE.putService(): SunJCE: Cipher.PBEWithHmacSHA384AndAES_128 -> com.sun.crypto.provider.PBES2Core$HmacSHA384AndAES_128
+
+Provider: SunJCE.putService(): SunJCE: Cipher.PBEWithHmacSHA512AndAES_128 -> com.sun.crypto.provider.PBES2Core$HmacSHA512AndAES_128
+
+Provider: SunJCE.putService(): SunJCE: Cipher.PBEWithHmacSHA1AndAES_256 -> com.sun.crypto.provider.PBES2Core$HmacSHA1AndAES_256
+
+Provider: SunJCE.putService(): SunJCE: Cipher.PBEWithHmacSHA224AndAES_256 -> com.sun.crypto.provider.PBES2Core$HmacSHA224AndAES_256
+
+Provider: SunJCE.putService(): SunJCE: Cipher.PBEWithHmacSHA256AndAES_256 -> com.sun.crypto.provider.PBES2Core$HmacSHA256AndAES_256
+
+Provider: SunJCE.putService(): SunJCE: Cipher.PBEWithHmacSHA384AndAES_256 -> com.sun.crypto.provider.PBES2Core$HmacSHA384AndAES_256
+
+Provider: SunJCE.putService(): SunJCE: Cipher.PBEWithHmacSHA512AndAES_256 -> com.sun.crypto.provider.PBES2Core$HmacSHA512AndAES_256
+
+Provider: SunJCE.putService(): SunJCE: KeyGenerator.DES -> com.sun.crypto.provider.DESKeyGenerator
+
+Provider: SunJCE.putService(): SunJCE: KeyGenerator.DESede -> com.sun.crypto.provider.DESedeKeyGenerator
+  aliases: [TripleDES]
+
+Provider: SunJCE.putService(): SunJCE: KeyGenerator.Blowfish -> com.sun.crypto.provider.BlowfishKeyGenerator
+
+Provider: SunJCE.putService(): SunJCE: KeyGenerator.AES -> com.sun.crypto.provider.AESKeyGenerator
+  aliases: [Rijndael]
+
+Provider: SunJCE.putService(): SunJCE: KeyGenerator.RC2 -> com.sun.crypto.provider.KeyGeneratorCore$RC2KeyGenerator
+
+Provider: SunJCE.putService(): SunJCE: KeyGenerator.ARCFOUR -> com.sun.crypto.provider.KeyGeneratorCore$ARCFOURKeyGenerator
+  aliases: [RC4]
+
+Provider: SunJCE.putService(): SunJCE: KeyGenerator.ChaCha20 -> com.sun.crypto.provider.KeyGeneratorCore$ChaCha20KeyGenerator
+
+Provider: SunJCE.putService(): SunJCE: KeyGenerator.HmacMD5 -> com.sun.crypto.provider.HmacMD5KeyGenerator
+
+Provider: SunJCE.putService(): SunJCE: KeyGenerator.HmacSHA1 -> com.sun.crypto.provider.HmacSHA1KeyGenerator
+  aliases: [1.2.840.113549.2.7, OID.1.2.840.113549.2.7]
+
+Provider: SunJCE.putService(): SunJCE: KeyGenerator.HmacSHA224 -> com.sun.crypto.provider.KeyGeneratorCore$HmacSHA2KG$SHA224
+  aliases: [1.2.840.113549.2.8, OID.1.2.840.113549.2.8]
+
+Provider: SunJCE.putService(): SunJCE: KeyGenerator.HmacSHA256 -> com.sun.crypto.provider.KeyGeneratorCore$HmacSHA2KG$SHA256
+  aliases: [1.2.840.113549.2.9, OID.1.2.840.113549.2.9]
+
+Provider: SunJCE.putService(): SunJCE: KeyGenerator.HmacSHA384 -> com.sun.crypto.provider.KeyGeneratorCore$HmacSHA2KG$SHA384
+  aliases: [1.2.840.113549.2.10, OID.1.2.840.113549.2.10]
+
+Provider: SunJCE.putService(): SunJCE: KeyGenerator.HmacSHA512 -> com.sun.crypto.provider.KeyGeneratorCore$HmacSHA2KG$SHA512
+  aliases: [1.2.840.113549.2.11, OID.1.2.840.113549.2.11]
+
+Provider: SunJCE.putService(): SunJCE: KeyPairGenerator.DiffieHellman -> com.sun.crypto.provider.DHKeyPairGenerator
+  aliases: [1.2.840.113549.1.3.1, DH, OID.1.2.840.113549.1.3.1]
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameterGenerator.DiffieHellman -> com.sun.crypto.provider.DHParameterGenerator
+  aliases: [1.2.840.113549.1.3.1, DH, OID.1.2.840.113549.1.3.1]
+
+Provider: SunJCE.putService(): SunJCE: KeyAgreement.DiffieHellman -> com.sun.crypto.provider.DHKeyAgreement
+  aliases: [1.2.840.113549.1.3.1, DH, OID.1.2.840.113549.1.3.1]
+  attributes: {SupportedKeyClasses=javax.crypto.interfaces.DHPublicKey|javax.crypto.interfaces.DHPrivateKey}
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.DiffieHellman -> com.sun.crypto.provider.DHParameters
+  aliases: [1.2.840.113549.1.3.1, DH, OID.1.2.840.113549.1.3.1]
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.DES -> com.sun.crypto.provider.DESParameters
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.DESede -> com.sun.crypto.provider.DESedeParameters
+  aliases: [TripleDES]
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.PBEWithMD5AndDES -> com.sun.crypto.provider.PBEParameters
+  aliases: [1.2.840.113549.1.5.3, PBE, OID.1.2.840.113549.1.5.3]
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.PBEWithMD5AndTripleDES -> com.sun.crypto.provider.PBEParameters
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.PBEWithSHA1AndDESede -> com.sun.crypto.provider.PBEParameters
+  aliases: [1.2.840.113549.1.12.1.3, OID.1.2.840.113549.1.12.1.3]
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.PBEWithSHA1AndRC2_40 -> com.sun.crypto.provider.PBEParameters
+  aliases: [1.2.840.113549.1.12.1.6, OID.1.2.840.113549.1.12.1.6]
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.PBEWithSHA1AndRC2_128 -> com.sun.crypto.provider.PBEParameters
+  aliases: [1.2.840.113549.1.12.1.5, OID.1.2.840.113549.1.12.1.5]
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.PBEWithSHA1AndRC4_40 -> com.sun.crypto.provider.PBEParameters
+  aliases: [1.2.840.113549.1.12.1.2, OID.1.2.840.113549.1.12.1.2]
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.PBEWithSHA1AndRC4_128 -> com.sun.crypto.provider.PBEParameters
+  aliases: [1.2.840.113549.1.12.1.1, OID.1.2.840.113549.1.12.1.1]
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.PBES2 -> com.sun.crypto.provider.PBES2Parameters$General
+  aliases: [1.2.840.113549.1.5.13, OID.1.2.840.113549.1.5.13]
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.PBEWithHmacSHA1AndAES_128 -> com.sun.crypto.provider.PBES2Parameters$HmacSHA1AndAES_128
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.PBEWithHmacSHA224AndAES_128 -> com.sun.crypto.provider.PBES2Parameters$HmacSHA224AndAES_128
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.PBEWithHmacSHA256AndAES_128 -> com.sun.crypto.provider.PBES2Parameters$HmacSHA256AndAES_128
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.PBEWithHmacSHA384AndAES_128 -> com.sun.crypto.provider.PBES2Parameters$HmacSHA384AndAES_128
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.PBEWithHmacSHA512AndAES_128 -> com.sun.crypto.provider.PBES2Parameters$HmacSHA512AndAES_128
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.PBEWithHmacSHA1AndAES_256 -> com.sun.crypto.provider.PBES2Parameters$HmacSHA1AndAES_256
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.PBEWithHmacSHA224AndAES_256 -> com.sun.crypto.provider.PBES2Parameters$HmacSHA224AndAES_256
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.PBEWithHmacSHA256AndAES_256 -> com.sun.crypto.provider.PBES2Parameters$HmacSHA256AndAES_256
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.PBEWithHmacSHA384AndAES_256 -> com.sun.crypto.provider.PBES2Parameters$HmacSHA384AndAES_256
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.PBEWithHmacSHA512AndAES_256 -> com.sun.crypto.provider.PBES2Parameters$HmacSHA512AndAES_256
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.Blowfish -> com.sun.crypto.provider.BlowfishParameters
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.AES -> com.sun.crypto.provider.AESParameters
+  aliases: [Rijndael]
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.GCM -> com.sun.crypto.provider.GCMParameters
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.RC2 -> com.sun.crypto.provider.RC2Parameters
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.OAEP -> com.sun.crypto.provider.OAEPParameters
+
+Provider: SunJCE.putService(): SunJCE: AlgorithmParameters.ChaCha20-Poly1305 -> com.sun.crypto.provider.ChaCha20Poly1305Parameters
+  aliases: [1.2.840.113549.1.9.16.3.18, OID.1.2.840.113549.1.9.16.3.18]
+
+Provider: SunJCE.putService(): SunJCE: KeyFactory.DiffieHellman -> com.sun.crypto.provider.DHKeyFactory
+  aliases: [1.2.840.113549.1.3.1, DH, OID.1.2.840.113549.1.3.1]
+
+Provider: SunJCE.putService(): SunJCE: SecretKeyFactory.DES -> com.sun.crypto.provider.DESKeyFactory
+
+Provider: SunJCE.putService(): SunJCE: SecretKeyFactory.DESede -> com.sun.crypto.provider.DESedeKeyFactory
+  aliases: [TripleDES]
+
+Provider: SunJCE.putService(): SunJCE: SecretKeyFactory.PBEWithMD5AndDES -> com.sun.crypto.provider.PBEKeyFactory$PBEWithMD5AndDES
+  aliases: [1.2.840.113549.1.5.3, PBE, OID.1.2.840.113549.1.5.3]
+
+Provider: SunJCE.putService(): SunJCE: SecretKeyFactory.PBEWithMD5AndTripleDES -> com.sun.crypto.provider.PBEKeyFactory$PBEWithMD5AndTripleDES
+
+Provider: SunJCE.putService(): SunJCE: SecretKeyFactory.PBEWithSHA1AndDESede -> com.sun.crypto.provider.PBEKeyFactory$PBEWithSHA1AndDESede
+  aliases: [1.2.840.113549.1.12.1.3, OID.1.2.840.113549.1.12.1.3]
+
+Provider: SunJCE.putService(): SunJCE: SecretKeyFactory.PBEWithSHA1AndRC2_40 -> com.sun.crypto.provider.PBEKeyFactory$PBEWithSHA1AndRC2_40
+  aliases: [1.2.840.113549.1.12.1.6, OID.1.2.840.113549.1.12.1.6]
+
+Provider: SunJCE.putService(): SunJCE: SecretKeyFactory.PBEWithSHA1AndRC2_128 -> com.sun.crypto.provider.PBEKeyFactory$PBEWithSHA1AndRC2_128
+  aliases: [1.2.840.113549.1.12.1.5, OID.1.2.840.113549.1.12.1.5]
+
+Provider: SunJCE.putService(): SunJCE: SecretKeyFactory.PBEWithSHA1AndRC4_40 -> com.sun.crypto.provider.PBEKeyFactory$PBEWithSHA1AndRC4_40
+  aliases: [1.2.840.113549.1.12.1.2, OID.1.2.840.113549.1.12.1.2]
+
+Provider: SunJCE.putService(): SunJCE: SecretKeyFactory.PBEWithSHA1AndRC4_128 -> com.sun.crypto.provider.PBEKeyFactory$PBEWithSHA1AndRC4_128
+  aliases: [1.2.840.113549.1.12.1.1, OID.1.2.840.113549.1.12.1.1]
+
+Provider: SunJCE.putService(): SunJCE: SecretKeyFactory.PBEWithHmacSHA1AndAES_128 -> com.sun.crypto.provider.PBEKeyFactory$PBEWithHmacSHA1AndAES_128
+
+Provider: SunJCE.putService(): SunJCE: SecretKeyFactory.PBEWithHmacSHA224AndAES_128 -> com.sun.crypto.provider.PBEKeyFactory$PBEWithHmacSHA224AndAES_128
+
+Provider: SunJCE.putService(): SunJCE: SecretKeyFactory.PBEWithHmacSHA256AndAES_128 -> com.sun.crypto.provider.PBEKeyFactory$PBEWithHmacSHA256AndAES_128
+
+Provider: SunJCE.putService(): SunJCE: SecretKeyFactory.PBEWithHmacSHA384AndAES_128 -> com.sun.crypto.provider.PBEKeyFactory$PBEWithHmacSHA384AndAES_128
+
+Provider: SunJCE.putService(): SunJCE: SecretKeyFactory.PBEWithHmacSHA512AndAES_128 -> com.sun.crypto.provider.PBEKeyFactory$PBEWithHmacSHA512AndAES_128
+
+Provider: SunJCE.putService(): SunJCE: SecretKeyFactory.PBEWithHmacSHA1AndAES_256 -> com.sun.crypto.provider.PBEKeyFactory$PBEWithHmacSHA1AndAES_256
+
+Provider: SunJCE.putService(): SunJCE: SecretKeyFactory.PBEWithHmacSHA224AndAES_256 -> com.sun.crypto.provider.PBEKeyFactory$PBEWithHmacSHA224AndAES_256
+
+Provider: SunJCE.putService(): SunJCE: SecretKeyFactory.PBEWithHmacSHA256AndAES_256 -> com.sun.crypto.provider.PBEKeyFactory$PBEWithHmacSHA256AndAES_256
+
+Provider: SunJCE.putService(): SunJCE: SecretKeyFactory.PBEWithHmacSHA384AndAES_256 -> com.sun.crypto.provider.PBEKeyFactory$PBEWithHmacSHA384AndAES_256
+
+Provider: SunJCE.putService(): SunJCE: SecretKeyFactory.PBEWithHmacSHA512AndAES_256 -> com.sun.crypto.provider.PBEKeyFactory$PBEWithHmacSHA512AndAES_256
+
+Provider: SunJCE.putService(): SunJCE: SecretKeyFactory.PBKDF2WithHmacSHA1 -> com.sun.crypto.provider.PBKDF2Core$HmacSHA1
+  aliases: [1.2.840.113549.1.5.12, OID.1.2.840.113549.1.5.12]
+
+Provider: SunJCE.putService(): SunJCE: SecretKeyFactory.PBKDF2WithHmacSHA224 -> com.sun.crypto.provider.PBKDF2Core$HmacSHA224
+
+Provider: SunJCE.putService(): SunJCE: SecretKeyFactory.PBKDF2WithHmacSHA256 -> com.sun.crypto.provider.PBKDF2Core$HmacSHA256
+
+Provider: SunJCE.putService(): SunJCE: SecretKeyFactory.PBKDF2WithHmacSHA384 -> com.sun.crypto.provider.PBKDF2Core$HmacSHA384
+
+Provider: SunJCE.putService(): SunJCE: SecretKeyFactory.PBKDF2WithHmacSHA512 -> com.sun.crypto.provider.PBKDF2Core$HmacSHA512
+
+Provider: SunJCE.putService(): SunJCE: Mac.HmacMD5 -> com.sun.crypto.provider.HmacMD5
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Mac.HmacSHA1 -> com.sun.crypto.provider.HmacSHA1
+  aliases: [1.2.840.113549.2.7, OID.1.2.840.113549.2.7]
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Mac.HmacSHA224 -> com.sun.crypto.provider.HmacCore$HmacSHA224
+  aliases: [1.2.840.113549.2.8, OID.1.2.840.113549.2.8]
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Mac.HmacSHA256 -> com.sun.crypto.provider.HmacCore$HmacSHA256
+  aliases: [1.2.840.113549.2.9, OID.1.2.840.113549.2.9]
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Mac.HmacSHA384 -> com.sun.crypto.provider.HmacCore$HmacSHA384
+  aliases: [1.2.840.113549.2.10, OID.1.2.840.113549.2.10]
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Mac.HmacSHA512 -> com.sun.crypto.provider.HmacCore$HmacSHA512
+  aliases: [1.2.840.113549.2.11, OID.1.2.840.113549.2.11]
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Mac.HmacSHA512/224 -> com.sun.crypto.provider.HmacCore$HmacSHA512_224
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Mac.HmacSHA512/256 -> com.sun.crypto.provider.HmacCore$HmacSHA512_256
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Mac.HmacPBESHA1 -> com.sun.crypto.provider.HmacPKCS12PBECore$HmacPKCS12PBE_SHA1
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Mac.HmacPBESHA224 -> com.sun.crypto.provider.HmacPKCS12PBECore$HmacPKCS12PBE_SHA224
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Mac.HmacPBESHA256 -> com.sun.crypto.provider.HmacPKCS12PBECore$HmacPKCS12PBE_SHA256
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Mac.HmacPBESHA384 -> com.sun.crypto.provider.HmacPKCS12PBECore$HmacPKCS12PBE_SHA384
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Mac.HmacPBESHA512 -> com.sun.crypto.provider.HmacPKCS12PBECore$HmacPKCS12PBE_SHA512
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Mac.HmacPBESHA512/224 -> com.sun.crypto.provider.HmacPKCS12PBECore$HmacPKCS12PBE_SHA512_224
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Mac.HmacPBESHA512/256 -> com.sun.crypto.provider.HmacPKCS12PBECore$HmacPKCS12PBE_SHA512_256
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Mac.PBEWithHmacSHA1 -> com.sun.crypto.provider.PBMAC1Core$HmacSHA1
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Mac.PBEWithHmacSHA224 -> com.sun.crypto.provider.PBMAC1Core$HmacSHA224
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Mac.PBEWithHmacSHA256 -> com.sun.crypto.provider.PBMAC1Core$HmacSHA256
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Mac.PBEWithHmacSHA384 -> com.sun.crypto.provider.PBMAC1Core$HmacSHA384
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Mac.PBEWithHmacSHA512 -> com.sun.crypto.provider.PBMAC1Core$HmacSHA512
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Mac.SslMacMD5 -> com.sun.crypto.provider.SslMacCore$SslMacMD5
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: Mac.SslMacSHA1 -> com.sun.crypto.provider.SslMacCore$SslMacSHA1
+  attributes: {SupportedKeyFormats=RAW}
+
+Provider: SunJCE.putService(): SunJCE: KeyStore.JCEKS -> com.sun.crypto.provider.JceKeyStore
+
+Provider: SunJCE.putService(): SunJCE: KeyGenerator.SunTlsPrf -> com.sun.crypto.provider.TlsPrfGenerator$V10
+
+Provider: SunJCE.putService(): SunJCE: KeyGenerator.SunTls12Prf -> com.sun.crypto.provider.TlsPrfGenerator$V12
+
+Provider: SunJCE.putService(): SunJCE: KeyGenerator.SunTlsMasterSecret -> com.sun.crypto.provider.TlsMasterSecretGenerator
+  aliases: [SunTls12MasterSecret, SunTlsExtendedMasterSecret]
+
+Provider: SunJCE.putService(): SunJCE: KeyGenerator.SunTlsKeyMaterial -> com.sun.crypto.provider.TlsKeyMaterialGenerator
+  aliases: [SunTls12KeyMaterial]
+
+Provider: SunJCE.putService(): SunJCE: KeyGenerator.SunTlsRsaPremasterSecret -> com.sun.crypto.provider.TlsRsaPremasterSecretGenerator
+  aliases: [SunTls12RsaPremasterSecret]
+
+ProviderConfig: Loading provider SunJGSS
+ProviderConfig: Attempt to load SunJGSS using SL
+ProviderConfig: Loading legacy provider: SunJGSS
+ProviderConfig: Error loading legacy provider SunJGSS
+java.lang.ClassNotFoundException: SunJGSS
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$ProviderLoader.legacyLoad(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$ProviderLoader.load(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$3.run(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$3.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig.doLoadProvider(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig.getProvider(Unknown Source)
+	at java.base/sun.security.jca.ProviderList.getProvider(Unknown Source)
+	at java.base/sun.security.jca.ProviderList$ServiceList.tryGet(Unknown Source)
+	at java.base/sun.security.jca.ProviderList$ServiceList$1.hasNext(Unknown Source)
+	at java.base/java.security.Signature.getInstance(Unknown Source)
+	at signature.verifier@1.0.0-SNAPSHOT/com.github.madduci.signature.verifier.SignatureVerifier.verify(SignatureVerifier.java:137)
+	at signature.verifier@1.0.0-SNAPSHOT/com.github.madduci.signature.verifier.SignatureVerifier.main(SignatureVerifier.java:167)
+ProviderConfig: Error loading provider SunJGSS
+ProviderConfig: Loading provider SunSASL
+ProviderConfig: Attempt to load SunSASL using SL
+ProviderConfig: Loading legacy provider: SunSASL
+ProviderConfig: Error loading legacy provider SunSASL
+java.lang.ClassNotFoundException: SunSASL
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$ProviderLoader.legacyLoad(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$ProviderLoader.load(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$3.run(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$3.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig.doLoadProvider(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig.getProvider(Unknown Source)
+	at java.base/sun.security.jca.ProviderList.getProvider(Unknown Source)
+	at java.base/sun.security.jca.ProviderList$ServiceList.tryGet(Unknown Source)
+	at java.base/sun.security.jca.ProviderList$ServiceList$1.hasNext(Unknown Source)
+	at java.base/java.security.Signature.getInstance(Unknown Source)
+	at signature.verifier@1.0.0-SNAPSHOT/com.github.madduci.signature.verifier.SignatureVerifier.verify(SignatureVerifier.java:137)
+	at signature.verifier@1.0.0-SNAPSHOT/com.github.madduci.signature.verifier.SignatureVerifier.main(SignatureVerifier.java:167)
+ProviderConfig: Error loading provider SunSASL
+ProviderConfig: Loading provider XMLDSig
+ProviderConfig: Attempt to load XMLDSig using SL
+ProviderConfig: Loading legacy provider: XMLDSig
+ProviderConfig: Error loading legacy provider XMLDSig
+java.lang.ClassNotFoundException: XMLDSig
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$ProviderLoader.legacyLoad(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$ProviderLoader.load(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$3.run(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$3.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig.doLoadProvider(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig.getProvider(Unknown Source)
+	at java.base/sun.security.jca.ProviderList.getProvider(Unknown Source)
+	at java.base/sun.security.jca.ProviderList$ServiceList.tryGet(Unknown Source)
+	at java.base/sun.security.jca.ProviderList$ServiceList$1.hasNext(Unknown Source)
+	at java.base/java.security.Signature.getInstance(Unknown Source)
+	at signature.verifier@1.0.0-SNAPSHOT/com.github.madduci.signature.verifier.SignatureVerifier.verify(SignatureVerifier.java:137)
+	at signature.verifier@1.0.0-SNAPSHOT/com.github.madduci.signature.verifier.SignatureVerifier.main(SignatureVerifier.java:167)
+ProviderConfig: Error loading provider XMLDSig
+ProviderConfig: Loading provider SunPCSC
+ProviderConfig: Attempt to load SunPCSC using SL
+ProviderConfig: Loading legacy provider: SunPCSC
+ProviderConfig: Error loading legacy provider SunPCSC
+java.lang.ClassNotFoundException: SunPCSC
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$ProviderLoader.legacyLoad(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$ProviderLoader.load(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$3.run(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$3.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig.doLoadProvider(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig.getProvider(Unknown Source)
+	at java.base/sun.security.jca.ProviderList.getProvider(Unknown Source)
+	at java.base/sun.security.jca.ProviderList$ServiceList.tryGet(Unknown Source)
+	at java.base/sun.security.jca.ProviderList$ServiceList$1.hasNext(Unknown Source)
+	at java.base/java.security.Signature.getInstance(Unknown Source)
+	at signature.verifier@1.0.0-SNAPSHOT/com.github.madduci.signature.verifier.SignatureVerifier.verify(SignatureVerifier.java:137)
+	at signature.verifier@1.0.0-SNAPSHOT/com.github.madduci.signature.verifier.SignatureVerifier.main(SignatureVerifier.java:167)
+ProviderConfig: Error loading provider SunPCSC
+ProviderConfig: Loading provider JdkLDAP
+ProviderConfig: Attempt to load JdkLDAP using SL
+ProviderConfig: Loading legacy provider: JdkLDAP
+ProviderConfig: Error loading legacy provider JdkLDAP
+java.lang.ClassNotFoundException: JdkLDAP
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$ProviderLoader.legacyLoad(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$ProviderLoader.load(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$3.run(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$3.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig.doLoadProvider(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig.getProvider(Unknown Source)
+	at java.base/sun.security.jca.ProviderList.getProvider(Unknown Source)
+	at java.base/sun.security.jca.ProviderList$ServiceList.tryGet(Unknown Source)
+	at java.base/sun.security.jca.ProviderList$ServiceList$1.hasNext(Unknown Source)
+	at java.base/java.security.Signature.getInstance(Unknown Source)
+	at signature.verifier@1.0.0-SNAPSHOT/com.github.madduci.signature.verifier.SignatureVerifier.verify(SignatureVerifier.java:137)
+	at signature.verifier@1.0.0-SNAPSHOT/com.github.madduci.signature.verifier.SignatureVerifier.main(SignatureVerifier.java:167)
+ProviderConfig: Error loading provider JdkLDAP
+ProviderConfig: Loading provider JdkSASL
+ProviderConfig: Attempt to load JdkSASL using SL
+ProviderConfig: Loading legacy provider: JdkSASL
+ProviderConfig: Error loading legacy provider JdkSASL
+java.lang.ClassNotFoundException: JdkSASL
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$ProviderLoader.legacyLoad(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$ProviderLoader.load(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$3.run(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$3.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig.doLoadProvider(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig.getProvider(Unknown Source)
+	at java.base/sun.security.jca.ProviderList.getProvider(Unknown Source)
+	at java.base/sun.security.jca.ProviderList$ServiceList.tryGet(Unknown Source)
+	at java.base/sun.security.jca.ProviderList$ServiceList$1.hasNext(Unknown Source)
+	at java.base/java.security.Signature.getInstance(Unknown Source)
+	at signature.verifier@1.0.0-SNAPSHOT/com.github.madduci.signature.verifier.SignatureVerifier.verify(SignatureVerifier.java:137)
+	at signature.verifier@1.0.0-SNAPSHOT/com.github.madduci.signature.verifier.SignatureVerifier.main(SignatureVerifier.java:167)
+ProviderConfig: Error loading provider JdkSASL
+ProviderConfig: Loading provider SunPKCS11
+ProviderConfig: Attempt to load SunPKCS11 using SL
+ProviderConfig: Loading legacy provider: SunPKCS11
+ProviderConfig: Error loading legacy provider SunPKCS11
+java.lang.ClassNotFoundException: SunPKCS11
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$ProviderLoader.legacyLoad(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$ProviderLoader.load(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$3.run(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig$3.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig.doLoadProvider(Unknown Source)
+	at java.base/sun.security.jca.ProviderConfig.getProvider(Unknown Source)
+	at java.base/sun.security.jca.ProviderList.getProvider(Unknown Source)
+	at java.base/sun.security.jca.ProviderList$ServiceList.tryGet(Unknown Source)
+	at java.base/sun.security.jca.ProviderList$ServiceList$1.hasNext(Unknown Source)
+	at java.base/java.security.Signature.getInstance(Unknown Source)
+	at signature.verifier@1.0.0-SNAPSHOT/com.github.madduci.signature.verifier.SignatureVerifier.verify(SignatureVerifier.java:137)
+	at signature.verifier@1.0.0-SNAPSHOT/com.github.madduci.signature.verifier.SignatureVerifier.main(SignatureVerifier.java:167)
+ProviderConfig: Error loading provider SunPKCS11
+SHA384withECDSA Signature not available
+java.security.NoSuchAlgorithmException: SHA384withECDSA Signature not available
+	at java.base/java.security.Signature.getInstance(Unknown Source)
+	at signature.verifier@1.0.0-SNAPSHOT/com.github.madduci.signature.verifier.SignatureVerifier.verify(SignatureVerifier.java:137)
+	at signature.verifier@1.0.0-SNAPSHOT/com.github.madduci.signature.verifier.SignatureVerifier.main(SignatureVerifier.java:167)
