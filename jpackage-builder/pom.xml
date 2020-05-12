@@ -11,5 +11,144 @@
 
   <artifactId>jpackage-builder</artifactId>
 
+  <properties>
+    <jarsigner.timestamp.server.url>https://freetsa.org/tsr</jarsigner.timestamp.server.url>
+    <working.directory>${project.build.directory}/workspace</working.directory>
+    <final.application.name>signature-verifier</final.application.name>
+    <final.application.version>1.0.0</final.application.version>
+    <final.application.jvm.options>-Djava.security.debug=all
+      -Xrs
+      -Xms48m
+      -Xmx256m
+      -XX:+UseG1GC
+      -XX:+UseStringDeduplication
+      -XX:+OptimizeStringConcat
+      -XX:MinHeapFreeRatio=1
+      -XX:MaxHeapFreeRatio=5
+      -XX:G1ReservePercent=5
+    </final.application.jvm.options>
+  </properties>
+
+  <build>
+    <plugins>
+      <!-- Copy required files in the working dir -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>${maven.dependency.plugin.version}</version>
+        <executions>
+          <execution>
+            <id>copy-dependencies</id>
+            <phase>process-sources</phase>
+            <goals>
+              <goal>copy-dependencies</goal>
+            </goals>
+            <configuration>
+              <stripClassifier>true</stripClassifier>
+              <outputDirectory>${working.directory}/dependencies</outputDirectory>
+              <excludeTypes>tar.gz</excludeTypes>
+            </configuration>
+          </execution>
+          <execution>
+            <id>unpack-dependencies</id>
+            <phase>process-sources</phase>
+            <goals>
+              <goal>unpack-dependencies</goal>
+            </goals>
+            <configuration>
+              <excludeTypes>jar</excludeTypes>
+              <stripClassifier>true</stripClassifier>
+              <outputDirectory>${working.directory}/</outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>${maven.antrun.plugin.version}</version>
+        <executions>
+          <execution>
+            <id>sign-jars</id>
+            <phase>process-sources</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <target name="sign-jars">
+                <echo>### Signing all the dependencies with timestamp</echo>
+                <signjar alias="${codesign.keystore.alias}" keystore="${codesign.keystore}"
+                         storepass="${codesign.keystore.password}"
+                         preservelastmodified="true"
+                         lazy="true"
+                         sigalg="SHA256withECDSA"
+                         tsaurl="${jarsigner.timestamp.server.url}">
+                  <path>
+                    <fileset dir="${working.directory}/dependencies" includes="*.jar"/>
+                  </path>
+                </signjar>
+              </target>
+            </configuration>
+          </execution>
+          <execution>
+            <id>create-jpackage</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <target name="create-runtime">
+                <echo>Creating redistributable package</echo>
+                <mkdir dir="${working.directory}"/>
+                <exec dir="${working.directory}" executable="${java.home}/bin/jpackage">
+                  <arg value="--type"/>
+                  <arg value="app-image"/>
+                  <arg value="--runtime-image"/>
+                  <arg value="${working.directory}/runtime"/>
+                  <arg value="--module-path"/>
+                  <arg value="${working.directory}/dependencies"/>
+                  <arg value="--dest"/>
+                  <arg value="${working.directory}/redist"/>
+                  <arg value="--name"/>
+                  <arg value="${final.application.name}"/>
+                  <arg value="--app-version"/>
+                  <arg value="${final.application.version}"/>
+                  <arg value="--java-options"/>
+                  <arg value="${final.application.jvm.options}"/>
+                  <arg value="--module"/>
+                  <arg value="signature.verifier/com.github.madduci.signature.verifier.SignatureVerifier"/>
+                </exec>
+                <echo>Creating compressed archive</echo>
+                <tar destfile="${working.directory}/redist.tar.gz" compression="gzip" basedir="${working.directory}/redist"/>
+                <attachartifact file="${working.directory}/redist.tar.gz" type="tar.gz"/>
+              </target>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.github.madduci</groupId>
+      <artifactId>jlink-builder</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+      <type>tar.gz</type>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.madduci</groupId>
+      <artifactId>signature-verifier</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.sourceforge.argparse4j</groupId>
+      <artifactId>argparse4j</artifactId>
+      <version>0.8.1</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
 
 </project>

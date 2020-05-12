@@ -8,8 +8,53 @@
     <version>1.0.0-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
-
   <artifactId>jlink-builder</artifactId>
+  <packaging>pom</packaging>
 
+  <properties>
+    <java.modules>java.desktop,java.xml.crypto,jdk.crypto.ec</java.modules>
+    <working.directory>${project.build.directory}/workspace</working.directory>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>${maven.antrun.plugin.version}</version>
+        <executions>
+          <execution>
+            <id>create-jlink</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <target name="create-runtime">
+                <echo>Creating runtime with modules ${java.modules}</echo>
+                <mkdir dir="${working.directory}"/>
+                <exec dir="${working.directory}" executable="${java.home}/bin/jlink">
+                  <arg value="--strip-debug"/>
+                  <arg value="--strip-native-commands"/>
+                  <arg value="--bind-services"/>
+                  <arg value="--no-man-pages"/>
+                  <arg value="--compress=2"/>
+                  <arg value="--module-path"/>
+                  <arg value="${java.home}/jmods"/>
+                  <arg value="--add-modules"/>
+                  <arg value="${java.modules}"/>
+                  <arg value="--output"/>
+                  <arg value="${working.directory}/runtime"/>
+                </exec>
+                <echo>Creating compressed archive</echo>
+                <tar destfile="${working.directory}/runtime.tar.gz" compression="gzip" basedir="${working.directory}"/>
+                <attachartifact file="${working.directory}/runtime.tar.gz" type="tar.gz"/>
+              </target>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>
